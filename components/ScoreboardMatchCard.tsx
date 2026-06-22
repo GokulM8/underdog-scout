@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { ScoreboardMatch } from "@/lib/scoreboardData";
+import { getScoreboardAtmosphereScore } from "@/lib/atmosphere";
 import LiveDot from "./LiveDot";
+import AtmosphereMeter from "./AtmosphereMeter";
 
 function useCountUp(target: number | null, durationMs = 700): number {
   const [value, setValue] = useState(0);
@@ -176,7 +178,9 @@ export default function ScoreboardMatchCard({ match }: { match: ScoreboardMatch 
           </div>
         )}
 
-        <div className="flex flex-wrap gap-2">
+        <AtmosphereMeter score={getScoreboardAtmosphereScore(match)} />
+
+        <div className="flex flex-wrap gap-2 mt-4">
           {match.isUpset && (
             <span className="text-[10px] font-display px-2 py-1 rounded-sm tracking-wide bg-red-600 text-white">
               UPSET

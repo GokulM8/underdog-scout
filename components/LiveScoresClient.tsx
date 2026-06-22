@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { NormalizedMatch } from "@/lib/footballData";
 import { findNationByTeamName } from "@/lib/nations";
+import { getLiveAtmosphereScore } from "@/lib/atmosphere";
 import LiveDot from "./LiveDot";
+import AtmosphereMeter from "./AtmosphereMeter";
 
 const REFRESH_SECONDS = 30;
 
@@ -326,6 +328,9 @@ function MatchRow({ match, flashing }: { match: NormalizedMatch; flashing: boole
           {isLiveStatus(match.status) && <LiveDot />}
           {match.minute != null && isLiveStatus(match.status) ? `${match.minute}'` : badge.label}
         </span>
+      </div>
+      <div className="mt-3">
+        <AtmosphereMeter score={getLiveAtmosphereScore(match)} mini />
       </div>
     </div>
   );
