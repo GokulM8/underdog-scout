@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Underdog Scout — FIFA World Cup 2026
 
-## Getting Started
+> AI-powered companion spotlighting the 6 debut & underdog nations at FIFA World Cup 2026 that mainstream media ignores.
 
-First, run the development server:
+![Underdog Scout](https://underdog-scout.vercel.app/og-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Live Demo:** https://underdog-scout.vercel.app  
+**GitHub:** https://github.com/GokulM8/underdog-scout  
+**Built for:** IBM SkillsBuild AI Builders Challenge — June 2026 (FIFA World Cup Theme)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏆 The Problem
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+48 teams. 6 debut nations. Zero mainstream coverage.
 
-## Learn More
+When FIFA World Cup 2026 expanded to 48 teams, history was made — Curaçao (population 156,000), Cape Verde, Jordan, Uzbekistan, Haiti, and Scotland qualified for the first time or returned after decades. But every sports network, every AI tool, every fan app focuses on Brazil, France, and Argentina.
 
-To learn more about Next.js, take a look at the following resources:
+**Underdog Scout exists for the nations nobody covers.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💡 What We Built
 
-## Deploy on Vercel
+A full-stack AI-powered web application that gives debut and underdog nations the spotlight they deserve — with live scores, AI match predictions, tactical briefs, hidden player discovery, and downloadable PDF scout reports.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Pages & Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Page | What it does |
+|---|---|
+| **Home** | 6 nation cards with player collages + Underdog Power Index ranking |
+| **Predictor** | Select any two teams → Groq AI generates scoreline, probabilities, and narrative |
+| **Live Feed** | Real-time scores with upset detection, atmosphere meter, and animated alerts |
+| **Scoreboard** | Full tournament scoreboard with past, present, and upcoming matches |
+| **Brief** | AI Nation Brief — select a nation, get full tactical breakdown from Groq |
+| **Team Pages** | Squad, fixtures, Hidden Hero Finder, Nation Story Card + IBM Docling PDF |
+
+---
+
+## 🔧 IBM Tool Integration
+
+### IBM Docling
+Used to generate downloadable **PDF Scout Reports** for each underdog nation. When a user clicks "Download Scout Report" on any team page, IBM Docling converts the structured match prediction and nation data into a professionally formatted PDF document.
